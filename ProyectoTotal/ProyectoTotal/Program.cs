@@ -22,70 +22,75 @@ namespace ProyectoTotal
                 PROGRAMA10 P10 = new PROGRAMA10();
                 byte NT;
                 string DatAT = "";
-                do
-                {
-                    Console.Clear();
-                    Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("                    ╔═══════════════════════════════════════╗ ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("                    ║");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("     ██   ██ █▀▀▀▀█ ██   █ █     █ ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("    ║");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("                    ║");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("     █ █ █ █ █      █ █  █ █     █ ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("    ║");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("                    ║");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("     █  █  █ █■■■█  █  █ █ █     █ ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("    ║");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("                    ║");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("     █     █ █      █   ██ █     █ ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("    ║");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("                    ║");
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write("     █     █ █▄▄▄▄█ █    █  █████  ");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("    ║");
-                    Console.WriteLine("                    ╚═══════════════════════════════════════╝ ");
-                    Console.WriteLine("");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("                   SELECIONE LA OPCION QUE DECIDA VISUALIZAR.");
-                    Console.WriteLine();
-                    Console.Write("       1. PROGRAMA1.\t\t");
-                    Console.Write("2. PROGRAMA2.\t\t"); ;
-                    Console.Write("3. PROGRAMA3.\t\t");
-                    Console.WriteLine("");
-                    Console.Write("\n       4. PROGRAMA4.\t\t");
-                    Console.Write("5. PROGRAMA5.\t\t");
-                    Console.Write("6. PROGRAMA6.\t\t");
-                    Console.WriteLine("");
-                    Console.Write("\n       7. PROGRAMA7.\t\t");
-                    Console.Write("8. PROGRAMA8.\t\t");
-                    Console.Write("9. PROGRAMA9.\t\t");
-                    Console.WriteLine("");
-                    Console.Write("\n       10. PROGRAMA10.\t\t");
-                    Console.WriteLine("11.Salir.\t\t");
-                    Console.WriteLine();
-                    DatAT = Console.ReadLine();
-                    NT = Convert.ToByte(DatAT);
-                    Console.WriteLine();
-                    if (NT > 0 && NT <= 11)
-                    {
-                        if (NT == 1)
+            do
+            {
+                Console.Clear();
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("                    ╔═══════════════════════════════════════╗ ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("                    ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("     ██   ██ █▀▀▀▀█ ██   █ █     █ ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    ║");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("                    ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("     █ █ █ █ █      █ █  █ █     █ ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    ║");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("                    ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("     █  █  █ █■■■█  █  █ █ █     █ ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    ║");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("                    ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("     █     █ █      █   ██ █     █ ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    ║");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("                    ║");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("     █     █ █▄▄▄▄█ █    █  █████  ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("    ║");
+                Console.WriteLine("                    ╚═══════════════════════════════════════╝ ");
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("                   SELECIONE LA OPCION QUE DECIDA VISUALIZAR.");
+                Console.WriteLine();
+                Console.Write("       1. PROGRAMA1.\t\t");
+                Console.Write("2. PROGRAMA2.\t\t"); ;
+                Console.Write("3. PROGRAMA3.\t\t");
+                Console.WriteLine("");
+                Console.Write("\n       4. PROGRAMA4.\t\t");
+                Console.Write("5. PROGRAMA5.\t\t");
+                Console.Write("6. PROGRAMA6.\t\t");
+                Console.WriteLine("");
+                Console.Write("\n       7. PROGRAMA7.\t\t");
+                Console.Write("8. PROGRAMA8.\t\t");
+                Console.Write("9. PROGRAMA9.\t\t");
+                Console.WriteLine("");
+                Console.Write("\n       10. PROGRAMA10.\t\t");
+                Console.WriteLine("11.Salir.\t\t");
+                Console.WriteLine();
+                DatAT = Console.ReadLine();
+                NT = Convert.ToByte(DatAT);
+                Console.WriteLine();
+            /*switch (NT)
+            {
+                case 1: P1.PROYECT1(); return;
+                default: Console.WriteLine("NO EXISTE ESA OPCION52"); return;
+            }*/ 
+                if (NT > 0 && NT <= 11)
+                { 
+                    if (NT == 1)
                         {
-                            P1.PROYECT1();
+                        P1.PROYECT1();
                         }
                         else
                         {
@@ -208,16 +213,6 @@ namespace ProyectoTotal
                 } while (NT != 11);
                 Console.ReadKey();
             }
-        }
-
-        
-        
-        
-        
-       
-        
-        
-        
-        
+        }  
     }
 
