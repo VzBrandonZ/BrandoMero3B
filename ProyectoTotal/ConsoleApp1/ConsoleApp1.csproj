@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C7F3138-DB6E-4D14-AF3C-404B334052D1}</ProjectGuid>
+    <ProjectGuid>{99CBD433-1155-46BA-B0D5-3BDE4E3D6DAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PROGRAMA1</RootNamespace>
-    <AssemblyName>PROGRAMA1</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

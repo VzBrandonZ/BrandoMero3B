@@ -44,6 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="PROGRAMA1.cs" />
+    <Compile Include="PROGRAMA10.cs" />
+    <Compile Include="PROGRAMA2.cs" />
+    <Compile Include="PROGRAMA3.cs" />
+    <Compile Include="PROGRAMA4.cs" />
+    <Compile Include="PROGRAMA5.cs" />
+    <Compile Include="PROGRAMA6.cs" />
+    <Compile Include="PROGRAMA7.cs" />
+    <Compile Include="PROGRAMA8.cs" />
+    <Compile Include="PROGRAMA9.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
