@@ -17,35 +17,51 @@ namespace ProyectoTotal
             Console.WriteLine("Registre un numero entero:");
             Data1 = Console.ReadLine();
             NumberE = Convert.ToInt32(Data1);
+            Console.WriteLine("   Columna1\t\tColumna2\t\tColumna3");
+            Console.WriteLine("    1 en 1 \t         2 en 2 \t         3 en 3");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+            Console.WriteLine("  █                                                    █");
             if (NumberE > 0)
             {
-                Console.WriteLine("   Columna1\t\tColumna2\t\tColumna3");
-                Console.WriteLine("    1 en 1 \t         2 en 2 \t         3 en 3");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-                Console.WriteLine("  █                                                    █");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                for (int C = 1; C <= NumberE; C++)
+                for (int i = 1; i <= NumberE; i++)
                 {
-                    Console.WriteLine("  █{0,5}\t        {1,5}\t\t        {2,5}  █", C, Z, X);
-                    Z = Z + 2;
-                    X = X + 3;
+                    Console.Write("      " + i);
+                    if (i <= NumberE / 2)
+                    {
+                        Console.Write("\t\t\t    " + (i + i));
 
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                    if (i <= NumberE / 3)
+                    {
+                        Console.WriteLine("\t\t\t   " + (i + i + i));
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(" ");
+                    }
                 }
                 Console.WriteLine("  █                                                    █");
                 Console.WriteLine("  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
             }
             else
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Usted registro un digito erróneo.");
             }
-            Console.WriteLine("\n");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("/////////////////////////////////////////");
-            Console.WriteLine("//   PRESIONE (ENTER)-->>PARA  SALIR.  //");
-            Console.WriteLine("/////////////////////////////////////////");
-            Console.ReadKey();
+                Console.WriteLine("\n");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("/////////////////////////////////////////");
+                Console.WriteLine("//   PRESIONE (ENTER)-->>PARA  SALIR.  //");
+                Console.WriteLine("/////////////////////////////////////////");
+                Console.ReadKey();
+            }
         }
     }
-}
+
