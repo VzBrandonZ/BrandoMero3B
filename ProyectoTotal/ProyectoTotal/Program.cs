@@ -20,8 +20,8 @@ namespace ProyectoTotal
                 PROGRAMA8 P8 = new PROGRAMA8();
                 PROGRAMA9 P9 = new PROGRAMA9();
                 PROGRAMA10 P10 = new PROGRAMA10();
-                byte NT;
-                string DatAT = "";
+                int NT=0;
+                string DatAT = "",LETRA="";
             do
             {
                 Console.Clear();
@@ -79,86 +79,46 @@ namespace ProyectoTotal
                 Console.WriteLine("11.Salir.\t\t");
                 Console.WriteLine();
                 DatAT = Console.ReadLine();
-                NT = Convert.ToByte(DatAT);
+                NT = Convert.ToInt32(DatAT);
+                Console.WriteLine("");
+                LETRA = Console.ReadLine();
                 Console.WriteLine();
-            /*switch (NT)
+            switch (NT)
             {
-                case 1: P1.PROYECT1(); return;
-                default: Console.WriteLine("NO EXISTE ESA OPCION52"); return;
-            }*/ 
-                if (NT > 0 && NT <= 11)
-                { 
-                    if (NT == 1)
-                        {
-                        P1.PROYECT1();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 2)
-                        {
-                            P2.PROYECT2();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 3)
-                        {
-                            P3.PROYECT3();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 4)
-                        {
-                            P4.PROYECT4();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 5)
-                        {
-                            P5.PROYECT5();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 6)
-                        {
-                            P6.PROYECT6();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 7)
-                        {
-                            P7.PROYECT7();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 8)
-                        {
-                            P8.PROYECT8();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 9)
-                        {
-                            P9.PROYECT9();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 10)
-                        {
-                            P10.PROYECT10();
-                        }
-                        else
-                        {
-                        }
-                        if (NT == 11)
+                    case 1: P1.PROYECT1(); break;
+                    case 2: P2.PROYECT2(); break;
+                    case 3: P3.PROYECT3(); break;
+                    case 4: P4.PROYECT4(); break;
+                    case 5: P5.PROYECT5(); break;
+                    case 6: P6.PROYECT6(); break;
+                    case 7: P7.PROYECT7(); break;
+                    case 8: P8.PROYECT8(); break;
+                    case 9: P9.PROYECT9(); break;
+                    case 10:P10.PROYECT10(); break;
+                    default: Console.WriteLine("NO EXISTE ESA OPCION"); break;
+            }
+                if (NT>11)
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("                     █▀▀▀▀▀█ █▀▀▀▀█ █▀▀▀▀█  █████   █▀▀▀▀█ ");
+                    Console.WriteLine("                     █       █    █ █    █ █     █  █    █ ");
+                    Console.WriteLine("                     █■■■■█  █████  █████  █     █  █████  ");
+                    Console.WriteLine("                     █       █   █  █    █ █     █  █    █ ");
+                    Console.WriteLine("                     █▄▄▄▄▄█ █    █ █     █ █████   █     █");
+                    Console.WriteLine("");
+                    Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+                    Console.WriteLine("XX ¡El PROGRAMA REGISTRO UN DATO ERRONEO! XX");
+                    Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine();
+                    Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||");
+                    Console.WriteLine("||    PRESIONE (INTRO)-->>PARA REGRESAR    ||");
+                    Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||");
+                    Console.ReadKey();
+
+                }
+                if (NT == 11)
                         {
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -184,32 +144,7 @@ namespace ProyectoTotal
                             Console.WriteLine("      ¡VzBrandonZ!");
                             Console.WriteLine("________________________");
                             Console.ReadKey();
-                        }
-                        else
-                        {
-                        }
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("                     █▀▀▀▀▀█ █▀▀▀▀█ █▀▀▀▀█  █████   █▀▀▀▀█ ");
-                        Console.WriteLine("                     █       █    █ █    █ █     █  █    █ ");
-                        Console.WriteLine("                     █■■■■█  █████  █████  █     █  █████  ");
-                        Console.WriteLine("                     █       █   █  █    █ █     █  █    █ ");
-                        Console.WriteLine("                     █▄▄▄▄▄█ █    █ █     █ █████   █     █");
-                        Console.WriteLine("");
-                        Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-                        Console.WriteLine("XX ¡El PROGRAMA REGISTRO UN DATO ERRONEO! XX");
-                        Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine();
-                        Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||");
-                        Console.WriteLine("||    PRESIONE (INTRO)-->>PARA REGRESAR    ||");
-                        Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||");
-                        Console.ReadKey();
-
-                    }
+                        }             
                 } while (NT != 11);
                 Console.ReadKey();
             }
