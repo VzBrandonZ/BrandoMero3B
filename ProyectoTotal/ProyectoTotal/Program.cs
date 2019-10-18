@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ProyectoTotal
 {
         class Program
@@ -21,7 +20,7 @@ namespace ProyectoTotal
                 PROGRAMA9 P9 = new PROGRAMA9();
                 PROGRAMA10 P10 = new PROGRAMA10();
                 int NT=0;
-                string DatAT = "",LETRA="";
+                string DatAT = "";
             do
             {
                 Console.Clear();
@@ -80,8 +79,6 @@ namespace ProyectoTotal
                 Console.WriteLine();
                 DatAT = Console.ReadLine();
                 NT = Convert.ToInt32(DatAT);
-                Console.WriteLine("");
-                LETRA = Console.ReadLine();
                 Console.WriteLine();
             switch (NT)
             {
@@ -95,7 +92,6 @@ namespace ProyectoTotal
                     case 8: P8.PROYECT8(); break;
                     case 9: P9.PROYECT9(); break;
                     case 10:P10.PROYECT10(); break;
-                    default: Console.WriteLine("NO EXISTE ESA OPCION"); break;
             }
                 if (NT>11)
                 {
@@ -116,7 +112,6 @@ namespace ProyectoTotal
                     Console.WriteLine("||    PRESIONE (INTRO)-->>PARA REGRESAR    ||");
                     Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||");
                     Console.ReadKey();
-
                 }
                 if (NT == 11)
                         {
@@ -150,4 +145,3 @@ namespace ProyectoTotal
             }
         }  
     }
-
