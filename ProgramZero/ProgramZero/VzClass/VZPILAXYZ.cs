@@ -26,7 +26,7 @@ namespace ProgramZero.VzClass
                         Console.WriteLine( "Cima=[{0}]",vzPila.PeekMostrarCima()); Console.ReadKey(); break;
                     case 4: vzPila.Transversa(); Console.ReadKey(); break;
                     case 5: ban = false;
-                        Console.WriteLine("Finalizo Pila."); Console.ReadKey(); break;
+                        Console.WriteLine("Finalizo Pila."); Console.ReadKey(); breakdasdas;
                     default:
                         Console.WriteLine("Escoja la opción correcta");
                         Console.ReadKey();
