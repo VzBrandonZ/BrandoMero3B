@@ -29,6 +29,7 @@ namespace ProgramZero.VzClass
                         break;
                 }
             } while (Ban);
+            Console.Clear();
             Console.ReadKey();
         }
         int Menu()
@@ -42,7 +43,7 @@ namespace ProgramZero.VzClass
             Console.WriteLine("█ 2) Recorrer                                                    █");
             Console.WriteLine("█ 3) Salir                                                       █");
             Console.WriteLine("██████████████████████████████████████████████████████████████████");
-            int opcion = Int32.Parse(Console.ReadLine());
+            int opcion = int.Parse(Console.ReadLine());
             Console.Clear();
             return opcion;
             Console.ReadKey();

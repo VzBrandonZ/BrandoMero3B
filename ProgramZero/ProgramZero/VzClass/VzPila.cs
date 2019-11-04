@@ -17,11 +17,12 @@ namespace ProgramZero.VzClass
         }
 
 
-        public void PushInsertar(int data)
+        public void PushInsertar()
         {
             VzCNodo NuedoNodo = new VzCNodo();
-            NuedoNodo._DatA_ = data;
-
+            Console.WriteLine("Ingrese un dato a la pila");
+            NuedoNodo._DatA_ = int.Parse(Console.ReadLine());
+            Console.WriteLine("Dato registrado");
             NuedoNodo.Siguiente = Cabeza.Siguiente;
             Cabeza.Siguiente = NuedoNodo;
         }

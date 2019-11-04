@@ -19,8 +19,7 @@ namespace ProgramZero.VzClass
                 {
                     case 1:
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Ingrese un numero");
-                        vzPila.PushInsertar(Int32.Parse(Console.ReadLine())); Console.WriteLine("Dato registrado"); break;
+                        vzPila.PushInsertar();  break;
                     case 2:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Se elimino el dato [{0}]",vzPila.PopEliminar()); Console.ReadKey(); break;
@@ -42,7 +41,6 @@ namespace ProgramZero.VzClass
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Clear();
-
             Console.WriteLine("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
             Console.WriteLine("█                           MENU                                 █");
             Console.WriteLine("██████████████████████████████████████████████████████████████████");
@@ -53,6 +51,7 @@ namespace ProgramZero.VzClass
             Console.WriteLine("█ 5) Salir                                                       █");
             Console.WriteLine("██████████████████████████████████████████████████████████████████");
             float opcion = float.Parse(Console.ReadLine());
+            Console.Clear();
             Console.ReadKey();
             return opcion;
         }

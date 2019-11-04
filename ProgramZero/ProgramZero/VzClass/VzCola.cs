@@ -22,13 +22,13 @@ namespace ProgramZero.VzClass
             if(Primero==null)
             {
                 Primero = NuevoNodo;
-                Primero.Siguiente = null;
+                Primero.Siguiente = NuevoNodo;
                 Ultimo = NuevoNodo;
             }
             else
             {
-                NuevoNodo.Siguiente = Ultimo;
-                Ultimo.Siguiente = null;
+                Ultimo.Siguiente = NuevoNodo;
+                NuevoNodo.Siguiente = null;
                 Ultimo = NuevoNodo;
             }
             Console.WriteLine("\nNodo ingresado\n");
