@@ -44,7 +44,6 @@ namespace ProgramZero
                 Console.WriteLine("█ 3) Salir                                                       █");
                 Console.WriteLine("██████████████████████████████████████████████████████████████████");
                 opcion = int.Parse(Console.ReadLine());
-                opcion2 = Console.ReadLine();
                 return opcion;
                 
 
