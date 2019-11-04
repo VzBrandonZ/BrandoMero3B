@@ -12,18 +12,16 @@ namespace ProgramZero
         {
             Console.Clear();
             VZPILAXYZ vZPILAXYZ = new VZPILAXYZ();
+            VzColaXYZ vZColaXYZ = new VzColaXYZ();
             bool ban = true;
             do
             {
-                int valor;
-                valor = Menu();
 
-
-
+                int valor = Menu();
                 switch (valor)
                 {
                     case 1: vZPILAXYZ.VzPilaXYZ(); break;
-                    case 2: break;
+                    case 2: vZColaXYZ.VZColaXYZ(); break;
                     case 3: ban = false; break;
                     default:
                         Console.WriteLine("Escoja la opción correcta");
@@ -37,7 +35,7 @@ namespace ProgramZero
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Clear();
                 int opcion;
-
+                string opcion2;
                 Console.WriteLine("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
                 Console.WriteLine("█                             MENU                               █");
                 Console.WriteLine("██████████████████████████████████████████████████████████████████");
@@ -46,7 +44,9 @@ namespace ProgramZero
                 Console.WriteLine("█ 3) Salir                                                       █");
                 Console.WriteLine("██████████████████████████████████████████████████████████████████");
                 opcion = int.Parse(Console.ReadLine());
+                opcion2 = Console.ReadLine();
                 return opcion;
+                
 
                 Console.ReadKey();
             }

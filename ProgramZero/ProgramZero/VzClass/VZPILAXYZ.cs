@@ -14,27 +14,31 @@ namespace ProgramZero.VzClass
             bool ban = true;
             do
             {
-                int valor = Menu();
+                float valor = Menu();
                 switch (valor)
                 {
                     case 1:
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Ingrese un numero");
-                        vzPila.PushInsertar(Int32.Parse(Console.ReadLine())); Console.ReadKey(); break;
+                        vzPila.PushInsertar(Int32.Parse(Console.ReadLine())); Console.WriteLine("Dato registrado"); break;
                     case 2:
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Se elimino el dato [{0}]",vzPila.PopEliminar()); Console.ReadKey(); break;
                     case 3:
-                        Console.WriteLine( "Cima=[{0}]",vzPila.PeekMostrarCima()); Console.ReadKey(); break;
-                    case 4:  vzPila.Transversa(); Console.ReadKey(); break;
+                        Console.ForegroundColor = ConsoleColor.Green; ;
+                        Console.WriteLine( "Cima=[{0}]",vzPila.PeekMostrarCima()); break;
+                    case 4:vzPila.Transversa(); break;
                     case 5: ban = false;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Finalizo Pila."); Console.ReadKey(); break;
                     default:
                         Console.WriteLine("Escoja la opción correcta");
-                        Console.ReadKey();
                         break;
                 }
+                Console.ReadKey();
             } while (ban);
         }
-        int Menu()
+        float Menu()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Clear();
@@ -48,7 +52,8 @@ namespace ProgramZero.VzClass
             Console.WriteLine("█ 4) Mostrar Pila                                                █");
             Console.WriteLine("█ 5) Salir                                                       █");
             Console.WriteLine("██████████████████████████████████████████████████████████████████");
-            int opcion = int.Parse(Console.ReadLine());
+            float opcion = float.Parse(Console.ReadLine());
+            Console.ReadKey();
             return opcion;
         }
     }

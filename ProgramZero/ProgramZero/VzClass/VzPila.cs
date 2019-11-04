@@ -45,7 +45,7 @@ namespace ProgramZero.VzClass
                 Buscador = Cabeza.Siguiente;
                 valor = Buscador._DatA_;
             }
-
+            
             return valor;
         }
             public void Transversa()
@@ -53,11 +53,10 @@ namespace ProgramZero.VzClass
             Buscador = Cabeza;
             while (Buscador.Siguiente!=null)
             {
-                
+
                 Buscador = Buscador.Siguiente;
                 int DaTA = Buscador._DatA_;
-                Console.WriteLine("[{0}]",DaTA);
-                
+                Console.WriteLine("[{0}]", DaTA);
             }
         }
         
