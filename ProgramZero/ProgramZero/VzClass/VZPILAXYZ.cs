@@ -24,7 +24,7 @@ namespace ProgramZero.VzClass
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Se elimino el dato [{0}]",vzPila.PopEliminar()); Console.ReadKey(); break;
                     case 3:
-                        Console.ForegroundColor = ConsoleColor.Green; ;
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine( "Cima=[{0}]",vzPila.PeekMostrarCima()); break;
                     case 4:vzPila.Transversa(); break;
                     case 5: ban = false;
