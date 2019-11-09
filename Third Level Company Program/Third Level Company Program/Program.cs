@@ -25,7 +25,7 @@ namespace Third_Level_Company_Program
                 client.Direccion = Console.ReadLine();
                 do
                 {
-                    Gasolina gasolina = new Gasolina("super", 4, 2.00f, client);
+                    Gasolina gasolina = new Gasolina("super",0,client);
                     Menumarca();
                     Console.WriteLine("-------------------------Datos del Cliente-------------------------\n" +
                                       "Nombre:" + client.Nombre +
@@ -74,20 +74,30 @@ namespace Third_Level_Company_Program
 
             void Menumarca()
             {
-                bool Ban;
+                bool Ban=true;
                 do
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Clear();
                     Console.WriteLine("¿Qué marca de gasolina desea comprar?\n" +
                                           "[Super]            [Extra]");
-                    switch (Console.ReadLine())
-                    {
-                        case "Super": gasolina.Tipo="Super"; Ban = false; break;
-                        case "Extra": gasolina.Tipo ="Extra";Ban = false; break;
-                        default: Console.WriteLine("Esta marca no esta registrada."); Console.ReadLine(); Ban = true;  break;
-                    }
-                    
+                            String marca = Console.ReadLine();
+                            if (marca=="Super"|| marca =="super"|| marca =="SUPER")
+                            {
+                                gasolina.Tipo = "Super"; Ban = false;
+                            }
+                            else
+                            {
+                                if (marca == "Extra" || marca == "extra" || marca == "EXTRA")
+                                {
+                                    gasolina.Tipo = "Extra"; Ban = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Esta opcion no existe.");
+                                    Console.ReadLine();
+                                }
+                            }               
                 } while (Ban);
                 Console.WriteLine("Ingrese la cantidad de galones que va a comprar.");
                 gasolina.Cantidad = int.Parse(Console.ReadLine());
@@ -96,6 +106,7 @@ namespace Third_Level_Company_Program
             }
                 } while (X);
                 Console.WriteLine("¡Gracias por su compra!");
+                Console.ReadLine();
             }
             catch (Exception Z)
             {
@@ -112,13 +123,20 @@ namespace Third_Level_Company_Program
                     Console.WriteLine("¿Desea hacer otra compra?");
                     Console.WriteLine("  [Si]          [No]");
                     String opcion = Console.ReadLine();
-                    switch (opcion)
+                    if (opcion == "SI" || opcion == "Si" || opcion == "si")
                     {
-                        case "Si": Ban2 = true; ban = false; break;
-                        case "No": Ban2 = false; ban = false; break;
-                        default:
-                            Console.WriteLine("Esta opcion no existe"); ban = true;
-                            break;
+                        Ban2 = true; ban = false;
+                    }
+                    else
+                    {
+                        if (opcion == "NO" || opcion == "No" || opcion == "no")
+                        {
+                            Ban2 = false; ban = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("esta opcion no existe."); ban = true;
+                        }
                     }
                 } while (ban);
                 return Ban2;

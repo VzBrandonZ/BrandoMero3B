@@ -18,7 +18,9 @@ namespace Third_Level_Company_Program.Class
             }
             set
             {
-                    tipo = value;                
+
+                    tipo = value;
+                                    
             }
         }
         private float cantidad;
@@ -39,28 +41,26 @@ namespace Third_Level_Company_Program.Class
         {
             get
             {
+                if (tipo == "Super")
+                {
+                    return 2.00f;
+                }
+                if (tipo =="Extra")
+                {
+                    return 1.50f;
+                }
                 return precio;
             }
-            set {
-                if (tipo=="Extra")
-                {
-                    precio= 1.50f;
-                }
-                if(tipo=="Super")
-                {
-                    precio=2.00f;
-                }
-                precio = value; }
-        }
-        
 
-        public Gasolina(string tipo, float cantidad, float precio, Client client)
+        }
+
+        public Gasolina(string tipo, float cantidad, Client client)
         {
             Tipo = tipo;
             Cantidad = cantidad;
-            Precio = precio;
             Client = client;
         }
+
         private Client client;
         public Client Client
         {
@@ -77,7 +77,7 @@ namespace Third_Level_Company_Program.Class
 
         public float Subtotal
         {
-            get { return subtotal=cantidad*precio; }
+            get { return subtotal=cantidad*Precio; }
         }
 
         private float iva;
