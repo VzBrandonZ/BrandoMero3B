@@ -15,9 +15,10 @@ namespace Third_Level_Company_Program
 
             try
             {
-
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("Nota:Si no ingresa nombre completo no continuara.\n");
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Ingrese sus nombres");
+                Console.WriteLine("Ingrese nombre completo");
                 client.Nombre = Console.ReadLine();
                 Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
                 client.Cedula = Console.ReadLine();
