@@ -22,6 +22,8 @@ namespace Third_Level_Company_Program
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Ingrese nombre completo");
                     client.Nombre = Console.ReadLine(); bandera = false;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Cedula Valida.");
                 }
                 catch (Exception Z)
                 {
@@ -30,9 +32,24 @@ namespace Third_Level_Company_Program
                     Console.ReadKey();
                 }
             } while (bandera);
+            do
+            {
+                Console.Clear();
+                try
+                { 
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
+                    client.Cedula = Console.ReadLine(); bandera = false;
+                }
+                catch (Exception error)
+                {
 
-            Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
-                client.Cedula = Console.ReadLine();
+                    Console.WriteLine(error.Message); bandera = true;
+                    Console.ReadKey();
+                }
+
+            } while (bandera);
+
                 Console.WriteLine("Ingrese su dirección.");
                 client.Direccion = Console.ReadLine();
                 do
@@ -40,9 +57,9 @@ namespace Third_Level_Company_Program
                     Gasolina gasolina = new Gasolina("super",0,client);
                     Menumarca();
                     Console.WriteLine("-------------------------Datos del Cliente-------------------------\n" +
-                                      "Nombre:" + client.Nombre +
-                                      "\nCedúla de indentidad:" + client.Cedula +
-                                      "\nDirección:" + client.Direccion+
+                                      "NOMBRE:" + client.Nombre +
+                                      "\nCEDÚLA DE IDENTIDAD:" + client.Cedula +
+                                      "\nDIRECCIÓN:" + client.Direccion+
                                       "\n-------------------------------------------------------------------");
                     Console.WriteLine();
                     gasolina.Client = client;
