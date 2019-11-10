@@ -10,17 +10,28 @@ namespace Third_Level_Company_Program
     {
         static void Main(string[] args)
         {
-            bool X = true;
+            bool X = true,bandera=true;
             Client client = new Client("Brandon rafael Mero cepeda", "1728821081", "Leonidas Proaño", new List<Gasolina>());
-
-            try
+            do
             {
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine("Nota:Si no ingresa nombre completo no continuara.\n");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Ingrese nombre completo");
-                client.Nombre = Console.ReadLine();
-                Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
+                Console.Clear();
+                try
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Nota:Si no ingresa nombre completo no continuara.\n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Ingrese nombre completo");
+                    client.Nombre = Console.ReadLine(); bandera = false;
+                }
+                catch (Exception Z)
+                {
+                    
+                    Console.WriteLine(Z.Message); bandera = true;
+                    Console.ReadKey();
+                }
+            } while (bandera);
+
+            Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
                 client.Cedula = Console.ReadLine();
                 Console.WriteLine("Ingrese su dirección.");
                 client.Direccion = Console.ReadLine();
@@ -68,10 +79,6 @@ namespace Third_Level_Company_Program
                     
                     X=Opcion();
                     Console.Clear();
-                
-                
-
-            Console.ReadKey();
 
             void Menumarca()
             {
@@ -96,24 +103,19 @@ namespace Third_Level_Company_Program
                                 else
                                 {
                                     Console.WriteLine("Esta opcion no existe.");
-                                    Console.ReadLine();
+                                Console.ReadKey();
                                 }
                             }               
                 } while (Ban);
                 Console.WriteLine("Ingrese la cantidad de galones que va a comprar.");
                 gasolina.Cantidad = int.Parse(Console.ReadLine());
                 Console.Clear();
-                Console.ReadLine();
             }
                 } while (X);
                 Console.WriteLine("¡Gracias por su compra!");
                 Console.ReadLine();
-            }
-            catch (Exception Z)
-            {
 
-                Console.WriteLine(Z.Message); ;
-            }
+
 
             bool Opcion()
             {

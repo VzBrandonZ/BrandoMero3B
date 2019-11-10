@@ -29,7 +29,8 @@ namespace Third_Level_Company_Program.Class
                 }
                 else
                 {
-                    throw new Exception("Número de palabras no completan una palabra");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    throw new Exception("Error:Debe ser nombre completo.");
                 }
 
                 
