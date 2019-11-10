@@ -22,8 +22,7 @@ namespace Third_Level_Company_Program
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Ingrese nombre completo");
                     client.Nombre = Console.ReadLine(); bandera = false;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Cedula Valida.");
+                       
                 }
                 catch (Exception Z)
                 {
@@ -40,6 +39,8 @@ namespace Third_Level_Company_Program
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Ingrese su numero de Cedúla de identidad.");
                     client.Cedula = Console.ReadLine(); bandera = false;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Cedula valida.");
                 }
                 catch (Exception error)
                 {
@@ -49,7 +50,7 @@ namespace Third_Level_Company_Program
                 }
 
             } while (bandera);
-
+            Console.Clear();
                 Console.WriteLine("Ingrese su dirección.");
                 client.Direccion = Console.ReadLine();
                 do
